@@ -1,0 +1,11 @@
+name = "kiai-hub-api"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+API_URL = "http://localhost:3001"
+
+# [[ r2_buckets ]]
+# binding = "ASSETS_BUCKET"
+# bucket_name = "kiai-hub-assets"
