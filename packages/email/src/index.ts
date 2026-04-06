@@ -21,6 +21,8 @@ const DEFAULT_FROM = "Kiai Hub <noreply@kiaihub.com>";
 
 export { registrationConfirmedHtml } from "./templates/registration-confirmed.js";
 export { paymentReceiptHtml } from "./templates/payment-receipt.js";
+export { waiverSentHtml } from "./templates/waiver-sent.js";
+export { waiverCompletedHtml } from "./templates/waiver-completed.js";
 
 export async function sendEmail(apiKey: string, options: SendEmailOptions) {
   const resend = getEmailClient(apiKey);
