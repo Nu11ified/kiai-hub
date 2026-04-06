@@ -9,6 +9,11 @@ import { eventFormRoutes } from "./routes/event-forms.js";
 import { eventPricingRoutes } from "./routes/event-pricing.js";
 import { registrationRoutes } from "./routes/registrations.js";
 import { paymentRoutes, paymentWebhookRoute } from "./routes/payments.js";
+import { waiverRoutes, waiverWebhookRoute } from "./routes/waivers.js";
+import { documentRoutes } from "./routes/documents.js";
+import { bracketRoutes } from "./routes/brackets.js";
+import { matchRoutes } from "./routes/matches.js";
+import { courtRoutes } from "./routes/courts.js";
 
 const app = new Elysia()
   .use(cors({
@@ -27,6 +32,12 @@ const app = new Elysia()
       .use(registrationRoutes)
       .use(paymentRoutes)
       .use(paymentWebhookRoute)
+      .use(waiverRoutes)
+      .use(waiverWebhookRoute)
+      .use(documentRoutes)
+      .use(bracketRoutes)
+      .use(matchRoutes)
+      .use(courtRoutes)
   );
 
 export type App = typeof app;
