@@ -25,7 +25,7 @@ export default function CourtsPage() {
   const [courtList, setCourts] = useState<Court[]>([]);
   const [courtCount, setCourtCount] = useState(3);
   const [shinpanMap, setShinpanMap] = useState<Map<string, ShinpanAssignment[]>>(new Map());
-  const [newShinpan, setNewShinpan] = useState({ name: "", role: "fukushin" as const, courtId: "" });
+  const [newShinpan, setNewShinpan] = useState<{ name: string; role: "shushin" | "fukushin"; courtId: string }>({ name: "", role: "fukushin", courtId: "" });
 
   useEffect(() => { loadCourts(); }, [dojoId, eventId]);
 
