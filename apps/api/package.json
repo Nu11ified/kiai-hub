@@ -1,0 +1,27 @@
+{
+  "name": "@kiai-hub/api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "build": "wrangler deploy --dry-run --outdir=dist",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^1.2.0",
+    "@kiai-hub/auth": "workspace:*",
+    "@kiai-hub/db": "workspace:*",
+    "@kiai-hub/shared": "workspace:*",
+    "@kiai-hub/storage": "workspace:^",
+    "elysia": "^1.2.0",
+    "pdf-lib": "^1.17.1",
+    "stripe": "^22.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260405.1",
+    "typescript": "^5.7.0",
+    "wrangler": "^3.100.0"
+  }
+}
