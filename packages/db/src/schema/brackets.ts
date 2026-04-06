@@ -44,6 +44,12 @@ export const seedMethodEnum = pgEnum("seed_method", [
   "by_region",
 ]);
 
+export const byeMethodEnum = pgEnum("bye_method", [
+  "random",
+  "by_rank",
+  "by_age",
+]);
+
 export const winMethodEnum = pgEnum("win_method", [
   "ippon",
   "hansoku",
@@ -105,6 +111,8 @@ export const brackets = pgTable("brackets", {
     .default(false),
   status: bracketStatusEnum("status").notNull().default("setup"),
   seedMethod: seedMethodEnum("seed_method").notNull().default("manual"),
+  byeMethod: byeMethodEnum("bye_method").notNull().default("random"),
+  thirdPlaceMatch: boolean("third_place_match").notNull().default(false),
   bracketData: jsonb("bracket_data"),
   createdAt: timestamp("created_at").defaultNow(),
   updatedAt: timestamp("updated_at")
