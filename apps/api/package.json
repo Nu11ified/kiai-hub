@@ -15,6 +15,7 @@
     "@kiai-hub/db": "workspace:*",
     "@kiai-hub/shared": "workspace:*",
     "elysia": "^1.2.0",
+    "pdf-lib": "^1.17.1",
     "stripe": "^22.0.0"
   },
   "devDependencies": {
